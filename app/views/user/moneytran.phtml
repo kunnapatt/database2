@@ -1,0 +1,59 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form method="post">
+            <div class="row justify-content-center" style="padding:10px">
+                <h4>Money Transfer</h4>
+            </div>
+            <div class="row justify-content-center" style="padding:20px">
+                <div class="col-12" style="text-align:center">
+                    <div class="card" style="box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);">
+                        <div class="card-body">
+                            <h6><?php echo $fname ?> <?php echo $sname ?></h6>
+                            <h6 style="padding:10px">Balance: <?php echo $bal ?></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="padding:0px 20px">
+                <div class="col-12" >
+                    <div class="card" style="box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);">
+                        <div class="card-body">
+                            <div class="row" style="padding:0px 20px;text-align:left">
+                                <div class="col-12">
+                                    <h6 style="color:rgb(255,100,0)">ขั้น 1 >> โอนเงินไปยังบัญชี</h6>
+                                </div>
+                            </div>
+                            <div class="row" style="padding:30px 20px;text-align:left;border-bottom:2px solid grey">
+                                <div class="col-3">
+                                    <h6>เลขบัญชี</h6><h6 style="color:red">*</h6>
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" name="numaccount" pattern="[0-9]{6}" title="จำนวนเลขบัญชีไม่ถูกต้อง" required>
+                                </div>
+                            </div>
+                            <div class="row" style="padding:30px 20px;">
+                                <div class="col-12">
+                                <h6 style="color:rgb(255,100,0)">ขั้น 2 >> เลือกจำนวนเงิน</h6>
+                                </div>
+                            </div>
+                            <div class="row" style="padding:0px 20px 30px;border-bottom:2px solid grey">
+                                <div class="col-3">
+                                    <h6>จำนวนเงิน</h6><h6 style="color:red">*</h6>
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" name="money"  required>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center" style="padding:50px">
+                                <button class="btn btn-primary"><h6>Submit</h6></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

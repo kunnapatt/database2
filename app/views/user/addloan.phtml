@@ -1,0 +1,32 @@
+<html>
+    <head>
+    </head>
+    <body>
+    <form method="post">
+        <div class="col-12" style="border-style:solid;padding:50px;background-color:rgb(69,69,69,0.2);">
+            <div class="col-1" style="text-align:end">
+                Amount 
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" name="amount" value="<?php echo "" ?>" required>
+            </div>
+            <div class="col-1" style="text-align:end">
+                ASSET 
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" name="asset" value="<?php echo "" ?>" required>
+            </div>
+            <div class="col-1" style="text-align:end">
+                asset price 
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" name="price" value="<?php echo "" ?>" required>
+            </div>
+            <div class="row justify-content-center" style="padding:40px 20px 5px">
+                <button type="submit" class="btn btn-primary" style="padding:10px 10px">Submit</button>
+            </div>
+        </div>
+        </form>
+        <div class="row justify-content-end" style="padding:5px"><?php echo $this->tag->linkTo('user/index', '<button class="btn btn-primary"><span class="fas fa-long-arrow-alt-left fa-2x" style="padding:0px 20px"></span></button>') ?></div>
+    </body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Phalcon PHP Framework</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo $this->url->get('img/favicon.ico')?>"/>
+        <style>
+          .navbar {
+            /* position: fix ; */
+            /* display: !important ; */
+          }
+          .ablack {
+            color: black ;
+          }
+          .sidenav {
+            height:100% ;
+            left:0 ;
+            top: 0 ;
+            position:fixed ;
+            width:200px ;
+            background:#111 ;
+            transition:0.5s ;
+          }
+
+        </style>
+        
+    </head>
+    <body>
+         
+        <!-- jQuery first, then Popper.js, and then Bootstrap's JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> 
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script> -->
+        <!-- graph -->
+        <!-- <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> -->
+        <!-- disable style -->
+            
+        <!--  -->
+        
+        <?php if ( $this->session->has('sid') ) { ?>
+        <body style="background-color:rgb(255, 250, 252)">
+        <nav class="navbar navbar-expand-lg " style="padding:10px 30px;background-color:rgb(255,155,0,0.8);color:black">
+            <div class="container" >
+                <!-- <a class="navbar-brand" href="index" style="color:black">Logo</a> -->
+                <?php echo $this->tag->linkTo('index', "<div style='color:black;padding:10px'><h5>Logo</h5></div>") ?>
+                
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNava" aria-controls="navbarNava" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="fas fa-bars fa-2x"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNava" >
+                <ul class="navbar-nav">
+                    <!-- <li class="nav-item active"><a class="nav-link" href="index" style="color:black">Home</a></li> -->
+                    <?php echo $this->tag->linkTo('index', "<div style='color:black;padding:10px'><h5>Home</h5></div>") ?>
+                    <?php echo $this->tag->linkTo('user/loan?id=', "<div style='color:black;padding:10px'><h5>Loan</h5></div>") ?>
+                    <!-- <li class="nav-item"><a class="nav-link" href="user/statement" style="color:black">Statement</a></li> -->
+                    <?php echo $this->tag->linkTo('user/statement', "<div style='color:black;padding:10px'><h5>Statement</h5></div>") ?>
+                    <?php echo $this->tag->linkTo('user/credit', "<div style='color:black;padding:10px'><h5>Credit</h5></div>") ?>
+                    <?php echo $this->tag->linkTo('user/History?id=', "<div style='color:black;padding:10px'><h5>History</h5></div>") ?>
+                    <?php echo $this->tag->linkTo('user/moneytran', "<div style='color:black;padding:10px'><h5>Money Transfers</h5></div>") ?>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <!-- <li class="nav-item float-md-right" style="padding:15px 10px 10px 0px" ><a href="login/logout"></a></li> -->
+                    <li class="nav-item float-md-right" style="padding:15px 10px 10px 0px" ><?php echo $this->tag->linkTo('login/logout',  '<button class="btn btn-danger">Logout</button>') ?></li>
+                    
+                    <!-- <li class="nav-item float-md-right" style="padding:10px" ><a href="user"><span class="fas fa-user-circle fa-3x" style="color:black"></span></a></li> -->
+                    <li class="nav-item float-md-right" style="padding:10px" ><?php echo $this->tag->linkTo('user', '<span class="fas fa-user-circle fa-3x" style="color:black"></span>') ?></li>
+                    
+                </ul>
+            </div>
+
+            </div>
+            
+        </nav>
+        </body>
+        <?php } else if ( $this->session->has('id') ) { ?>
+            <nav class="navbar navbar-inverse navbar-fixed-left navbar-expand-lg navbar-dark bg-dark " style="padding:10px 30px;color:white">
+                <div class="container" >
+                    <?php echo $this->tag->linkTo('index', "<div style='color:white ;padding:10px'><h5>Logo</h5></div>") ?>
+                    
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavb" aria-controls="navbarNavb" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fas fa-bars fa-2x"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavb" >
+                    <ul class="navbar-nav">
+                        <?php echo $this->tag->linkTo('index', "<div style='color:white;padding:10px'><h5>Home</h5></div>") ?>
+                        <?php echo $this->tag->linkTo('officer/calendar?id=', "<div style='color:white;padding:10px'><h5>Calendar</h5></div>") ?>
+                        <?php echo $this->tag->linkTo('officer/dept?id=', "<div style='color:white;padding:10px'><h5>Dept</h5></div>") ?>
+                        <?php echo $this->tag->linkTo('officer/customer?id=', "<div style='color:white;padding:10px'><h5>Customer</h5></div>") ?>
+                        <?php echo $this->tag->linkTo('officer/addcredit?id=', "<div style='color:white;padding:10px'><h5>Add Credit</h5></div>") ?>
+                        <?php echo $this->tag->linkTo('officer/crm?id=', "<div style='color:white;padding:10px'><h5>Crm</h5></div>") ?>
+                        
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item float-md-right" style="padding:15px"><?php echo $this->tag->linkTo('officer/logout', '<button class="btn btn-primary" style="padding:10px 20px">Logout</button>') ?></li>
+                        <li class="nav-item float-md-right" style="padding:10px" ><?php echo $this->tag->linkTo('officer', '<span class="fas fa-user-circle fa-3x" style="color:black"></span>') ?></li>
+                    </ul>
+                </div>
+
+                </div>
+            
+            </nav>
+
+
+        <?php } else { ?>
+            <body style="background-color:rgb(255, 250, 252)">
+            <nav class="navbar navbar-expand-lg " style="padding:10px 30px;background-color:rgb(255,155,0,0.8);color:black">
+            <div class="container" >
+                <!-- <a class="navbar-brand" href="index" style="color:black">Logo</a> -->
+                <?php echo $this->tag->linkTo('index', "<div style='color:black;padding:10px'><h5>Logo</h5></div>") ?>
+                
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavb" aria-controls="navbarNavb" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="fas fa-bars fa-2x"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavb" >
+                <ul class="navbar-nav">
+                    <!-- <li class="nav-item active"><a class="nav-link" href="index" style="color:black">Home</a></li> -->
+                    <?php echo $this->tag->linkTo('index', "<div style='color:black;padding:10px'><h5>Home</h5></div>") ?>
+                    <?php echo $this->tag->linkTo('user/loan', "<div style='color:black;padding:10px'><h5>Loan</h5></div>") ?>
+                    <!-- <li class="nav-item"><a class="nav-link" href="user/statement" style="color:black">Statement</a></li> -->
+                    <?php echo $this->tag->linkTo('user/statement', "<div style='color:black;padding:10px'><h5>Statement</h5></div>") ?>
+                    <?php echo $this->tag->linkTo('user/credit', "<div style='color:black;padding:10px'><h5>Credit</h5></div>") ?>
+                    <?php echo $this->tag->linkTo('user/History?id=', "<div style='color:black;padding:10px'><h5>History</h5></div>") ?>
+                    <?php echo $this->tag->linkTo('user/moneytran', "<div style='color:black;padding:10px'><h5>Money Transfers</h5></div>") ?>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <!-- <li class="nav-item float-md-right" ><a href="#user"><span class="fas fa-user-circle fa-3x" style="color:black"></span></a></li> -->
+                    <!-- <li class="nav-item float-md-right" style="padding:15px"><a href="login"><button class="btn btn-secondary" style="padding:10px 20px">Login</button></a></li> -->
+                    <li class="nav-item float-md-right" style="padding:15px"><?php echo $this->tag->linkTo('login', '<button class="btn btn-primary" style="padding:10px 20px">Login</button>') ?></li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        </body>
+        <?php } ?>
+        
+
+        <div class="container" style="padding:30px 20px">
+            <?php echo $this->getContent(); ?>
+        </div>

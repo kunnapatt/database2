@@ -1,0 +1,49 @@
+<html>
+    <head>
+    <script>
+    // function test(a){
+    //     var x = document.getElementById("myText") ;
+    //     document.getElementById("myText1").value = a.value ;
+    // }
+
+    // function myFunction(test) {
+    //     var cal = test.value ;
+    //     test(cal) ;
+        
+    // }
+
+    
+        // total = cal*parseFloat(this.value) ;
+    
+        // function test(){
+        //     var x = document.getElementById("myText") ;
+        //     x.value = x.value.toUpperCase() ;
+        // }
+        // document.getElementById("myText").value = cal ;
+    </script>
+    <script>
+        function cal() {
+            var n = document.getElementById("myText").value ;
+            var op = document.getElementById("sel").value ;
+
+            if ( op === '+' ){
+                
+            }else if ( op === '-' ){
+
+            }
+        }
+    </script>
+    </head>
+    <body>
+    <select name="sel" onchange="myFunction(this)">
+    <option disabled selected>Choose Database Type</option>
+    <option value="+">Add</option>
+    <option value="-">Delete</option>
+
+</select>
+
+<input id="myText" type="text" onkeyup="test()">
+<input type="text" id="myText1" style="color:black">
+
+    </body>
+</html>

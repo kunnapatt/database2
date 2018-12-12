@@ -1,0 +1,43 @@
+<html>
+    <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            var url = "id" ;
+            var value = "" ;
+            $(document).ready( function () {
+                $("#selectcid").change(function () {
+                    $(this).val() ;
+                    value = $(this).val() ;
+                    window.location.href = '?' + url + '=' + value + '&' ;
+                })
+            }) ;
+        </script>
+        
+
+    </head>
+    <body style="background-color:#222;color:white">
+        <div class="row"><h2>Create</h2></div>
+        <div class="row" style="padding:30px 0px">
+            <div class="col-10 mr-auto form-group">
+                <select class="form-control" id="selectcid" >
+                    <option selected disabled>Select Customer</option>
+                    <?php for ($i = 0 ; $i < count($cusid) ; $i++ ) { ?>
+                        <option value="<?php echo $cusid[$i] ?>"><?php echo $cusid[$i] ?> </option>
+                    <?php } ?>
+                </select>
+            </div> 
+        </div>
+        <?php if ( $_GET['id'] != null ) {?>
+        <div class="row" style="padding:30px 0px">
+            <div class="card" style="color:black">
+                <div class="card-body">
+                <form method="post">
+                    <input type="date" required name="datecal">
+                    <button type="submit" class="btn btn-primary" placeholder="DD/MM/YYYY">Submit</button> 
+                </form>
+                </div>
+            </div>
+        </div>
+        <?php } ?>
+    </body>
+</html>

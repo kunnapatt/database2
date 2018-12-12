@@ -1,0 +1,33 @@
+<html>
+    <head>
+    </head>
+    <body style="background-color:#222;color:white">
+        <div style="padding:30px 0px"><h2>Crm</h2></div>
+        <?php for( $i = 0 ; $i < count($mess) ; $i++ ) { ?>
+            <div class="card" style="color:black;margin-bottom:20px">
+                <div class="card-header" style="padding:20px">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5><?php echo "$fname[$i] $sname[$i]" ?></h5>
+                        </div>
+                        <div class="col-6" style="text-align:end">
+                            <h5><?php echo "#$ticket[$i]"?></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="body" style="padding:30px">
+                    <div class="row">
+                        <div class="col-6">
+                            <?php echo $mess[$i] ?>
+                        </div>
+                        <div class="col-6" style="text-align:end">
+                            <a href="?id=<?php echo$ticket[$i] ?>"><button class="btn btn-danger" >Delete</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <?php }?>
+        
+    </body>
+</html>

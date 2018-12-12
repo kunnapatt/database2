@@ -1,0 +1,60 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2 style="padding:50px 50px 20px"><center> My Loan </center></h2>
+        <table class="table table-hover">
+            <thead class="thead">
+                <tr>
+                    <th scope="col">Loan ID</th>
+                    <th scope="col">Asset TYPE</th>
+                    <th scope="col">Prices</th>
+                    
+                </tr>
+
+            </thead>
+            <tbody>
+                <?php 
+                    for ( $i = 0 ; $i < count($loanid) ; $i++){
+                    ?> <tr>
+                        <!-- <th scope="row" style="padding:20px"> <?php echo $i ?> </th>  -->
+                        <td style="padding:10px"><?php echo $loanid[$i] ; ?> </td>
+                        <td style="padding:10px"><?php echo $asset_type[$i] ; ?> </td>
+                        <td style="padding:10px"><?php echo $asset_info[$i] ; ?> </td>
+                        <!-- <td> </td> -->
+                        </tr> 
+                        
+                    <?php } ?> 
+            </tbody>
+        </table>   
+        <h2 style="padding:50px 50px 20px"><center>PAY</center></h2>
+        <table class="table table-hover">
+            <thead class="thead">
+                <tr>
+                    <th scope="col">Loan ID</th>
+                    <th scope="col">Loan Amount</th>
+                    <th scope="col">Insterestrate</th>
+                    <th scope="col">Pay_Per_Month</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <?php 
+                    for ( $i = 0 ; $i < count($loanamount) ; $i++){
+                    ?> <tr>
+                        <!-- <th scope="row" style="padding:20px"> <?php echo $i ?> </th>  -->
+                        <td style="padding:10px"><?php echo $loanid[$i] ; ?> </td>
+                        <td style="padding:10px"><?php echo $loanamount[$i] ; ?> </td>
+                        <td style="padding:10px"><?php echo $insterestrate[$i] ; ?> </td>
+                        <td style="padding:10px"><?php echo $pay_per_month[$i] ; ?> </td>
+                        <!-- <td> </td> -->
+                        </tr> 
+                        
+                    <?php } ?> 
+            </tbody>
+        </table>
+        <!-- <div class="border-bottom" style="padding:20px 0px 20px"></div> -->
+        <div class="row justify-content-end" style="padding:50px"><?php echo $this->tag->linkTo('index', '<button class="btn btn-primary"><span class="fas fa-long-arrow-alt-left fa-2x" style="padding:0px 20px"></span></button>') ?></div>
+    </body>
+</html>

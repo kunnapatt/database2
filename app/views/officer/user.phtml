@@ -1,0 +1,63 @@
+<html>
+    <head>
+    </head>
+    <body style="background-color:#222">
+    <div class="col-12" style="border-style:solid;padding:50px;background-color:rgb(230,230,230,0.8);">
+            <div class="row justify-content-center" style="padding:100px 20px 30px">
+                <h1> ACCOUNT </h1>
+            </div>
+            <div class="row justify-content-center" style="padding:20px">
+                <span class="fas fa-user-circle fa-10x"></span>
+            </div>
+            <div class="row justify-content-center" style="padding:30px"></div>
+            <form>
+            <div class="form-row">
+                <div class="form-group col-6 align-items-center">
+                    <div class="row" style="padding:20px" >
+                        <label for="firstname">Firstname</label>
+                        <?php $a = $this->session->get('username')?>
+                        
+                        <input type="text" id="firstname" class="form-control" value="<?php echo $fname ?>" disabled style="text-align:;padding:5px 15px">
+                        <!-- cxzc     -->
+                        
+                    </div>
+                    <div class="row" style="padding:20px">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" class="form-control" value="<?php echo $mail ?>" disabled style="text-align:;padding:5px 15px">
+                    </div>
+                    
+                </div>
+                <div class="form-group col-6 align-items-center">
+                    <div class="row" style="padding:20px">
+                        <label for="lastname">Lastname</label>
+                        <input type="text" id="lastname" class="form-control" value="<?php echo $sname ?>" disabled style="text-align:;padding:5px 15px">
+                    </div>
+                    <div class="row" style="padding:20px">
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" class="form-control" value="<?php echo $phone ?>" disabled style="padding:5px 15px">
+                    </div>
+                    
+                </div>
+                <div class="from-group col-12 align-itemscenter">
+                    <div class="row" style="padding:10px 20px">
+                        <label for="address">Address</label>
+                        <textarea type="text" id="address" class="form-control" disabled style="text-align:;padding:5px 15px" row="1"><?php echo $addr ?></textarea>
+                    </div>
+                </div>
+            </div>
+            </form>
+            <div class="row" style="border-bottom:1px solid black;padding:30px">
+                <div class="col-6">
+                    <h6>Username : <?php echo $name ?></h6>
+                </div>
+                <div class="col-6">
+                    <a href="user/change">Change Password ?</a>
+                </div>
+            </div>
+
+            <div class="row justify-content-center" style="padding:30px">
+                <button class="btn btn-primary" style="10px 20px">Submit</button>
+            </div>
+        </div>
+    </body>
+</html>
